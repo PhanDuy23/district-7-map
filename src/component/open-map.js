@@ -84,7 +84,7 @@ export default function Map() {
           return (
             <ImageOverlay
               key={`${x}-${y}`}
-              url={`/quan72023/${z}/${x}/${y}.png`}
+              url={`/district-7-map/quan72023/${z}/${x}/${y}.png`}
               bounds={[
                 [top, left],
                 [top - tileSize, left + tileSize]
@@ -105,3 +105,4 @@ export default function Map() {
     </MapContainer>
   );
 }
+
