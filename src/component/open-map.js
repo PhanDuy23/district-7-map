@@ -4,7 +4,6 @@ import L from "leaflet";
 import tiles from "../map.json";
 import { useState } from "react";
 import "leaflet/dist/leaflet.css";
-import { MakerOnClick } from "./map";
 function HandleZoom({ center, setZoom }) {
   const map = useMap();
 
@@ -76,7 +75,7 @@ export default function Map() {
       style={{ height: "100vh", width: "100%" }}
     >
       <HandleZoom center={center} setZoom={setZoom} />
-      {/* <MakerOnClick /> */}
+ 
       {X.map((x, colIndex) =>
         Y.map((y, rowIndex) => {
           const top = (rowIndex + 1) * tileSize;
@@ -94,7 +93,7 @@ export default function Map() {
           );
         })
       )}
-      <Marker key={1} position={[center[0]-100,center[1]+200]} icon={defaultIcon}>
+      {/* <Marker key={1} position={[center[0]-100,center[1]+200]} icon={defaultIcon}>
         <Popup>chính giữa</Popup>
       </Marker>
       <Marker key={2} position={[0, 0]} icon={defaultIcon}>
@@ -102,7 +101,7 @@ export default function Map() {
       </Marker>
       <Marker key={10} position={[width, height]} icon={defaultIcon}>
         <Popup>max</Popup>
-      </Marker>
+      </Marker> */}
     </MapContainer>
   );
 }
