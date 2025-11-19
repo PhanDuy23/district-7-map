@@ -1,23 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-
+import MapView from './component/custom-tileLayer';
+import MapContainer from './component/map';
+import OpenMap from './component/open-map';
+import Zoom12 from './component/zoom12';
+import MapPDF from './component/open-map';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{width: "100%", height:"600px"}}>
+      <MapPDF/>
     </div>
   );
 }
